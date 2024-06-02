@@ -1,17 +1,16 @@
 // import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, Text, View, StyleSheet } from 'react-native';
-import Header from "./src/components/Header.jsx"
-import Footer from "./src/components/Footer.jsx"
+import Header from "./src/components/Header/Header.jsx"
+import Footer from "./src/components/Footer/Footer.jsx"
+import Main from "./src/components/Main/Main.jsx";
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
+    <View style={styles.container}>
         <Header />
-        <Text>Hola React Native...</Text>
-        <Footer/>
-      </View>
-    </SafeAreaView>
+        <Main/>
+        <Footer />
+    </View>
   );
 }
 
@@ -21,7 +20,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f1f1f1",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "100%"
+    height: "100%",
+    width:"100%"
   }
 })
 
